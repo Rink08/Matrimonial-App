@@ -3,10 +3,10 @@
     <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/edit-profile']"></ion-icon>Profile Creation</ion-title>
     <ion-grid>
       <ion-row>
-        <ion-col sizeLg="10" sizeMd="10" sizeXs="12">  
+        <ion-col sizeLg="10" sizeMd="10" sizeXs="12">
     <div class="container">
 
-    <form action="" method="post" >
+    <form action="" method="post" ng-app="">
      <ion-grid>
       <ion-row>
         <ion-label class="name">Name</ion-label>
@@ -16,7 +16,7 @@
      </ion-row>
 
      <ion-row>
-      <ion-label class="Height">Height</ion-label> 
+      <ion-label class="Height">Height</ion-label>
      </ion-row>
       <ion-row>
         <ion-input id="Name1" type="name" class="height" placeholder = "Height"> </ion-input>
@@ -30,12 +30,12 @@
     </ion-row>
 
     <ion-row>
-      <ion-label class="MS">Maritial Status</ion-label> 
+      <ion-label class="MS">Maritial Status</ion-label>
     </ion-row>
       <!--------------------------------------------------------------- Select Maritial status ----------------------------------------------------------------------------->
     <ion-row>
-      <ion-select interface="popover"  class="Maritial" 
-      id="mariatlStatus" (onchange)="changeStatus()"  >
+      <ion-select interface="popover"  class="Maritial"
+      id="mariatlStatus" (ionChange)="changeStatus($event)"  >
         <ion-select-option value="NM">Never Married</ion-select-option>
         <ion-select-option value="D">Divorced</ion-select-option>
         <ion-select-option value="S">Seperated</ion-select-option>
@@ -43,8 +43,8 @@
       </ion-select>
     </ion-row>
 
-   
-                                <div class="hide" id="any" ng-hide=isHidden>
+
+                                <div [hidden]=isHidden>
                                   <ion-row>
                                     <ion-label>Any Children <p>If any</p>Mention</ion-label>
 
@@ -86,15 +86,15 @@
     <ion-row>
       <ion-label class="Caste">Caste</ion-label>
     </ion-row>
-       
+
     <ion-row>
       <ion-input id="Name1" type="name" class="caste" placeholder = "Caste"> </ion-input>
     </ion-row>
 
   <ion-row>
-    <ion-label class="Mother">Mother Tongue</ion-label> 
+    <ion-label class="Mother">Mother Tongue</ion-label>
   </ion-row>
-      
+
   <ion-row>
     <ion-input id="Name1" type="name" class="Tongue" placeholder = "Mother Tongue"> </ion-input>
   </ion-row>
@@ -112,7 +112,7 @@
       <ion-row>
         <ion-input id="Name1" type="name" class="state" placeholder = "State"> </ion-input>
       </ion-row>
-     
+
 
      <ion-row>
       <ion-label class="City">City</ion-label>
@@ -129,7 +129,7 @@
      </ion-row>
 
       <ion-row>
-        <ion-button (click)="onClick()" shape="round" class="Submit" [routerLink]="['/edit-profile']">
+        <ion-button  shape="round" class="Submit" [routerLink]="['/edit-profile']">
           SAVE
         </ion-button>
       </ion-row>
